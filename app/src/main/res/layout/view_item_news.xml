@@ -26,7 +26,7 @@
             android:layout_alignTop="@id/iv_publication_logo"
             android:layout_marginTop="@dimen/margin_medium"
             android:layout_toRightOf="@id/iv_publication_logo"
-            android:text="Eleven Media"
+            android:text="@string/publication_title"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/text_regular_2x"
             />
@@ -38,7 +38,7 @@
             android:layout_alignLeft="@id/tv_publication_name"
             android:layout_below="@id/tv_publication_name"
             android:layout_marginTop="@dimen/margin_small"
-            android:text="Posted At : Jan 01 - 6:30AM"
+            android:text="@string/posted_date"
             android:textColor="@color/secondary_text"
             android:textSize="@dimen/text_regular"
             />

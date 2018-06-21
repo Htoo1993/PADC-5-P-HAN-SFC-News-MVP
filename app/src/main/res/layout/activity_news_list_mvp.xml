@@ -12,8 +12,8 @@
         tools:context="com.padcmyanmar.sfc.activities.NewsListActivityMVP"
         >
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/iv_news"
+        <com.padcmyanmar.sfc.components.SmartRecyclerView
+            android:id="@+id/rv_news"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
