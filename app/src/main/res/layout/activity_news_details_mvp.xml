@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_news_details_brief"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_news_details_brief"
+                android:layout_margin="@dimen/margin_medium"
+                android:textSize="@dimen/text_regular_3x"
+                android:lineSpacingMultiplier="1.3"
+                android:maxLines="2"
+                android:ellipsize="end"
+                />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_news_details_publication_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_news_details_brief"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/publication_title"
+                android:layout_alignLeft="@id/tv_news_details_brief"
+                />
+
+            <TextView
+                android:id="@+id/tv_news_details_posted_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/news_details_posted_date"
+                android:layout_toRightOf="@id/tv_news_details_publication_name"
+                android:layout_alignBottom="@id/tv_news_details_publication_name"
+                android:layout_marginLeft="@dimen/margin_medium"
+                />
+
+            <ImageView
+                android:id="@+id/iv_news_details_image_mvp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/img_news_placeholder"
+                android:scaleType="centerCrop"
+                android:layout_below="@id/tv_news_details_publication_name"
+                android:layout_margin="@dimen/margin_medium"
+                />
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tv_news_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_news_details"
+                android:layout_below="@id/iv_news_details_image_mvp"
+                android:layout_margin="@dimen/margin_medium"
+                android:lineSpacingMultiplier="1.3"
+                />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

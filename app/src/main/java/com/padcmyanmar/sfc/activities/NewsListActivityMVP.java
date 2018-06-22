@@ -46,7 +46,7 @@ public class NewsListActivityMVP extends BaseActivity
         mNewsListPresenter.onCreate();
 
         rvNews.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
-        mNewsAdapterMVP = new NewsAdapterMVP(getApplicationContext());
+        mNewsAdapterMVP = new NewsAdapterMVP(getApplicationContext(), mNewsListPresenter);
         rvNews.setAdapter(mNewsAdapterMVP);
     }
 
@@ -92,7 +92,7 @@ public class NewsListActivityMVP extends BaseActivity
 
     @Override
     public void launchNewsDetailsScreen(String newsId) {
-        Intent intent = NewsDetailsActivity.newIntent(getApplicationContext(),newsId);
+        Intent intent = NewsDetailsMvpActivity.newIntent(getApplicationContext(),newsId);
         startActivity(intent);
     }
 }

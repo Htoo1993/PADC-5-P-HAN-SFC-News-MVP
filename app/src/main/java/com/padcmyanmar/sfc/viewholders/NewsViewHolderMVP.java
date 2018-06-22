@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.padcmyanmar.sfc.R;
 import com.padcmyanmar.sfc.data.vo.NewsVO;
+import com.padcmyanmar.sfc.delegates.NewsItemDelegate;
 
 import org.w3c.dom.Text;
 
@@ -29,14 +30,19 @@ public class NewsViewHolderMVP extends BaseViewHolder<NewsVO> {
     @BindView(R.id.tv_posted_date)
     TextView tvPostedDate;
 
-    public NewsViewHolderMVP(View itemView) {
+    private NewsItemDelegate mNewsItemDelegate;
+
+    private NewsVO mNews;
+
+    public NewsViewHolderMVP(View itemView, NewsItemDelegate newsItemDelegate) {
         super(itemView);
+        mNewsItemDelegate = newsItemDelegate;
     }
 
     @Override
     public void setData(NewsVO data) {
-
-        tvBriefNews.setText(data.getDetails());
+        mNews = data;
+        tvBriefNews.setText(data.getBrief());
         tvPublicationName.setText(data.getPublication().getTitle());
         tvPostedDate.setText(data.getPostedDate());
 
@@ -55,6 +61,6 @@ public class NewsViewHolderMVP extends BaseViewHolder<NewsVO> {
 
     @Override
     public void onClick(View v) {
-
+        mNewsItemDelegate.onTapNews(mNews);
     }
 }

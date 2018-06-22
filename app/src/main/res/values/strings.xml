@@ -31,4 +31,6 @@
     <string name="lbl_mark_my_home_on_google_map"><u><i>Mark my home on Google Map</i></u></string>
     <string name="posted_date">Posted At : Jan 01 - 6:30AM</string>
     <string name="publication_title">Eleven Media</string>
+    <string name="dummy_news_details_brief">Sample News Brief</string>
+    <string name="news_details_posted_date">June 22 2018</string>
 </resources>

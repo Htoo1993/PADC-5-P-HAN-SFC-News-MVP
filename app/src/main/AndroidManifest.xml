@@ -38,6 +38,11 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activities.NewsDetailsMvpActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
         <receiver android:name=".receivers.InternetStateReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
